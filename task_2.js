@@ -21,3 +21,23 @@ Test it on 50 and 75. See how it behaves on –1. Why? Can you think of a way to
 
 შეამოწმეთ 50 და 75. ნახეთ როგორ მუშაობს -1 -ზე. რა მოხდა? როგორ შეგვიძლია გამოვასწოროთ?
 */
+
+//solution
+function isEven(a) {
+    if (a === 0) {
+      return true; 
+    } else if (a === 1) {
+      return false; 
+    } else if (a < 0) {
+      return isEven(-a); 
+    } else {
+      return isEven(a - 2); 
+    }
+  }
+  
+  //test
+  console.log(isEven(50)); 
+  console.log(isEven(75)); 
+  console.log(isEven(-1)); 
+  console.log(isEven(4));
+  console.log(isEven(-4));
