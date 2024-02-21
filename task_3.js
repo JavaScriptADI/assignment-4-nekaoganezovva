@@ -20,3 +20,37 @@ characters). Rewrite countBs to make use of this new function.
 თუ რამდენი "B" (მაღალ რეგისტრში) character-ია ამ სტრინგში.
 2. დაწერეთ ფუნქცია, რომელიც იგივე ნარიად იქცევა როგორც countBs, მაგრამ ასევე იღებს მეორე პარამეტრს, რა character-ის დათვლა გვსურს.
 */
+
+//solution1
+function countBs(string) {
+    let count = 0;
+  
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] === 'B') {
+        count++;
+      }
+    }
+    return count;
+  }
+  
+  //test
+  let res = countBs("Billie Eilish preforms at SuperBowl with Alek Baldwin and Drew Barrymore.");
+  console.log(res);
+
+  //solution2
+  function countChar(string, char) {
+    let count = 0;
+  
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] === char) {
+        count++;
+      }
+    }  
+    return count;
+  }
+  
+  //test
+  let resChar = countChar("Billie Eilish preforms at SuperBowl with Alek Baldwin and Drew Barrymore.", "w");
+  console.log(resChar); 
+  
+  
